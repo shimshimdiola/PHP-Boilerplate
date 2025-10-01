@@ -1,5 +1,3 @@
-# === Root files ===
-cat > $APP_NAME/README.md <<'EOF'
 # WebTemp: The PHP Boilerplate 🚀
 
 > **A fast, minimal, and organized PHP/HTML template designed for rapid web development.**
