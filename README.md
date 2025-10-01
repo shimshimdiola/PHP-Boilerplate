@@ -10,11 +10,13 @@
 
 ---
 
-## 🚦 Getting Started
+## 🚀 Getting Started
 
-1.  **Prerequisites:** Ensure you have a local server stack (e.g., XAMPP, MAMP, WAMP) running PHP and MySQL.
-2.  **Setup:** Place the \`WebTemp/\` directory in your web server's root folder (`htdocs` or `www`).
-3.  **Run:** Visit \`http://localhost/WebTemp/\` in your browser.
+1.  **Prerequisites:** Ensure you have a local server stack (e.g., **XAMPP**, **MAMP**, **WAMP**) running PHP and MySQL.
+2.  **Setup:** Place the **`WebTemp/`** directory in your web server's root folder (`htdocs` or `www`).
+3.  **Run:** Visit **`http://localhost/WebTemp/`** in your browser.
+
+---
 
 ## 🗂️ Project Structure at a Glance
 
@@ -22,21 +24,23 @@ A clean separation of concerns makes development easy:
 
 | Directory | Purpose |
 | :--- | :--- |
-| `layouts/` | Primary HTML structure: header, footer, base. |
-| `partials/` | Reusable UI components: navigation, meta tags, sidebars. |
-| `pages/` | Application content and routing entry points. |
-| `assets/` | Frontend resources: CSS, JS, images, fonts. |
-| `include/` | PHP helper functions (`functions.php`). |
-| `config/` | Site-wide settings (`config.php`). |
-| `db/` | Database connection logic (`connection.php`). |
+| **`layouts/`** | Primary HTML structure: header, footer, base. |
+| **`partials/`** | Reusable UI components: navigation, meta tags, sidebars. |
+| **`pages/`** | Application content and routing entry points. |
+| **`assets/`** | Frontend resources: CSS, JS, images, fonts. |
+| **`include/`** | PHP helper functions (**`functions.php`**). |
+| **`config/`** | Site-wide settings (**`config.php`**). |
+| **`db/`** | Database connection logic (**`connection.php`**). |
 
 ---
 
 ## 🔑 Database Setup (MySQL)
 
-You must run this SQL snippet in your **phpMyAdmin**, MySQL Workbench, or CLI to enable the login feature.
+You must run the SQL snippet below in your **phpMyAdmin**, MySQL Workbench, or CLI to enable the login feature.
 
-\`\`\`sql
+### 💾 SQL Snippet
+
+```sql
 CREATE DATABASE webtemp;
 
 USE webtemp;
@@ -49,10 +53,15 @@ CREATE TABLE users (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Default Admin Account: user='admin@example.com', pass='password123'
 INSERT INTO users (name, email, password)
 VALUES ('Admin', 'admin@example.com', MD5('password123'));
-\`\`\`
+```
 
-✅ **Login Hint:** Use the default admin credentials above to test the authentication flow.
-EOF
+### 🔑 Default Login Credentials
+
+Use the following credentials to test the authentication flow:
+
+```
+Email: admin@example.com
+Password: password123
+```
