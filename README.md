@@ -1,6 +1,6 @@
 # WebTemp: The PHP Boilerplate 🚀
 
-> **A fast, minimal, and organized PHP/HTML template designed for rapid web development.**
+![WebTemp Logo](https://github.com/shimshimdiola/PHP-Boilerplate/blob/88ea6bf0be30d2a8982448b9048af59c8ed1b232/assets/images/logo.png)  > **A fast, minimal, and organized PHP/HTML template designed for rapid web development.**
 > Fully equipped with basic routing and a simple, **rich set of frontend plugins for enhanced UI/UX.**
 
 ## ✨ Project Status
