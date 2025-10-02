@@ -1,7 +1,6 @@
 # WebTemp: The PHP Boilerplate 🚀
 
-> **A fast, minimal, and organized PHP/HTML template designed for rapid web development.**
-> Fully equipped with basic routing and a simple, session-based login system.
+
 
 ## ✨ Project Status
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -10,6 +9,7 @@
 [![Plugins](https://img.shields.io/badge/Plugins-Frontend%20Libraries-blue.svg)]()
 [![Plugins](https://img.shields.io/badge/Plugins-Core%20UI%2FUX-orange.svg)]()
 [![Plugins](https://img.shields.io/badge/Plugins-Bootstrap%20%26%20jQuery-8A2BE2.svg)]()
+
 ---
 
 ## 🚀 Getting Started
