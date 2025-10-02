@@ -122,7 +122,7 @@ VALUES ('Admin', 'admin@example.com', MD5('password123'));
 ## Getting Started  
 
 ### Prerequisites  
-- Install [XAMPP](https://www.apachefriends.org/) or any PHP/Node.js environment  
+- Install [XAMPP](https://www.apachefriends.org/)
 - Install MySQL / MariaDB for database management  
 
 ### Installation  
