@@ -6,8 +6,10 @@
 ## ✨ Project Status
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Technology](https://img.shields.io/badge/Technology-PHP%20%7C%20MySQL-7777BB.svg)]()
-[![Login Feature](https://img.shields.io/badge/Auth-Simple%20Session%20Login-yellowgreen.svg)]()
-
+[![Plugins](https://img.shields.io/badge/Plugins-Included-green.svg)]()
+[![Plugins](https://img.shields.io/badge/Plugins-Frontend%20Libraries-blue.svg)]()
+[![Plugins](https://img.shields.io/badge/Plugins-Core%20UI%2FUX-orange.svg)]()
+[![Plugins](https://img.shields.io/badge/Plugins-Bootstrap%20%26%20jQuery-8A2BE2.svg)]()
 ---
 
 ## 🚀 Getting Started
