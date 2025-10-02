@@ -119,3 +119,13 @@ CREATE TABLE users (
 INSERT INTO users (name, email, password)
 VALUES ('Admin', 'admin@example.com', MD5('password123'));
 ````
+## Getting Started  
+
+### Prerequisites  
+- Install [XAMPP](https://www.apachefriends.org/) or any PHP/Node.js environment  
+- Install MySQL / MariaDB for database management  
+
+### Installation  
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/yourusername/EVSU_GRADING_SYSTEM.git
