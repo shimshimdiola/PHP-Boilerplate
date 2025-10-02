@@ -128,4 +128,5 @@ VALUES ('Admin', 'admin@example.com', MD5('password123'));
 ### Installation  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/yourusername/EVSU_GRADING_SYSTEM.git
+   [git clone https://github.com/yourusername/EVSU_GRADING_SYSTEM.git](https://github.com/shimshimdiola/PHP-Boilerplate.git)
+   ```
