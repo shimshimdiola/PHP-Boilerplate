@@ -12,11 +12,27 @@
 
 ---
 
+
 ## 🚀 Getting Started
 
-1.  **Prerequisites:** Ensure you have a local server stack (e.g., **XAMPP**, **MAMP**, **WAMP**) running PHP and MySQL.
-2.  **Setup:** Place the **`WebTemp/`** directory in your web server's root folder (`htdocs` or `www`).
-3.  **Run:** Visit **`http://localhost/WebTemp/`** in your browser.
+This section will guide you through setting up WebTemp on your local machine.
+
+### Prerequisites
+Before you begin, ensure you have the following installed:
+-   **PHP**: A local server stack like [XAMPP](https://www.apachefriends.org/), [MAMP](https://www.mamp.info/en/downloads/), or [WAMP](https://www.wampserver.com/en/) (which includes PHP and Apache).
+-   **MySQL / MariaDB**: For database management (usually included with XAMPP/MAMP/WAMP).
+
+### Installation
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/shimshimdiola/PHP-Boilerplate.git](https://github.com/shimshimdiola/PHP-Boilerplate.git) # Replace with your actual repo URL if different
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd PHP-Boilerplate
+    ```
+3.  **Place in your web server:** Move the cloned `PHP-Boilerplate` directory into your web server's root folder (e.g., `htdocs` for XAMPP, `www` for WAMP). You might want to rename it to `WebTemp` or your desired project name.
+4.  **Run:** Visit `http://localhost/WebTemp/` (or your chosen directory name) in your browser.
 
 ---
 
@@ -119,14 +135,5 @@ CREATE TABLE users (
 INSERT INTO users (name, email, password)
 VALUES ('Admin', 'admin@example.com', MD5('password123'));
 ````
-## Getting Started  
 
-### Prerequisites  
-- Install [XAMPP](https://www.apachefriends.org/)
-- Install MySQL / MariaDB for database management  
 
-### Installation  
-1. Clone the repository:  
-   ```bash
-   [git clone https://github.com/yourusername/EVSU_GRADING_SYSTEM.git](https://github.com/shimshimdiola/PHP-Boilerplate.git)
-   ```
