@@ -18,7 +18,6 @@ include 'layouts/header.php';
         <section class="info-section template-info">
             <h2>Start Building in Minutes</h2>
             <p>WebTemp provides a ready-to-run foundation, eliminating repetitive setup tasks. Focus instantly on your core application logic.</p>
-            
             <div class="feature-grid">
                 <div class="feature-card">
                     <h3>📁 Organized Structure</h3>
@@ -34,27 +33,7 @@ include 'layouts/header.php';
                 </div>
             </div>
         </section>
-        
-        <section class="info-section login-details">
-            <h2>🔑 Authentication & Database Setup</h2>
-            <?php if (isUserLoggedIn()): ?>
-                <div class="login-status success">
-                    <h3>🎉 You are currently logged in!</h3>
-                    <p>You can access user-specific pages and features now. Click 'Logout' in the navigation to test the login process again.</p>
-                </div>
-            <?php else: ?>
-                <div class="login-status warning">
-                    <p>To test the login feature, use the credentials below. **Remember to run the SQL in <code>README.md</code> first!**</p>
-                    <table class="credentials-table">
-                        <tr><td>**Email:**</td><td><code>admin@example.com</code></td></tr>
-                        <tr><td>**Password:**</td><td><code>password123</code></td></tr>
-                    </table>
-                    <p class="login-prompt">
-                        <a href="page.php?p=login">Click here to log in →</a>
-                    </p>
-                </div>
-            <?php endif; ?>
-        </section>
+
     </main>
 </div>
 
