@@ -1,6 +1,4 @@
-  <footer>
-    <p>&copy; <?php echo getCurrentYear(); ?> <?php echo SITE_NAME; ?>. All rights reserved.</p>
-  </footer>
+  </div><!-- END wrapper -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
@@ -20,5 +18,4 @@
   <!-- App js -->
   <script src="assets/js/app.js"></script>
   </body>
-
   </html>

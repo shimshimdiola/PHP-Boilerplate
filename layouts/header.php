@@ -18,10 +18,10 @@
   <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
-  <header class="main-header">
-    <div class="logo-container">
-      <img src="assets/images/logo.png" alt="Logo" width="50">
-      <span class="site-title"><?php echo SITE_NAME; ?></span>
+<body class="fixed-left">
+  <div id="preloader">
+    <div id="status">
+      <div class="spinner"></div>
     </div>
-  </header>
+  </div><!-- Begin page -->
+  <div id="wrapper">
