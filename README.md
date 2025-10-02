@@ -35,50 +35,66 @@ A clean separation of concerns makes development easy:
 | **`db/`** | Database connection logic (**`connection.php`**). |
 
 ---
-
 ## 🔌 Included Frontend Libraries / Plugins
 
-WebTemp comes packed with these essential and useful frontend libraries to accelerate your development:
+WebTemp comes packed with these essential and useful frontend libraries to accelerate your development, organized by their primary function:
 
-* **Alertify**
-* **Animate.css**
-* **Bootstrap**
+### Core Frameworks & UI
+* **Bootstrap** (v3.x - for responsive design and UI components)
+* **jQuery** (v1.x - for DOM manipulation and event handling)
+* **jQuery UI** (for advanced UI widgets and interactions)
+* **Animate.css** (for simple, pre-built CSS animations)
+
+### Forms & Input Enhancements
 * **Bootstrap Colorpicker**
 * **Bootstrap Datepicker**
 * **Bootstrap Inputmask**
 * **Bootstrap Maxlength**
-* **Bootstrap Rating**
 * **Bootstrap Touchspin**
-* **C3 (D3.js-based Charts)**
-* **Chart.js**
-* **Chartist**
 * **Clockpicker**
 * **Colorpicker**
-* **D3.js**
-* **Datatables**
-* **Dropify**
-* **Flot Chart**
-* **FullCalendar**
-* **GMaps**
-* **Ion.RangeSlider**
-* **jQuery Knob**
-* **jQuery UI**
-* **jVectorMap**
-* **Magnific Popup**
-* **Moment.js**
-* **Morris.js (Charts)**
-* **Parsley.js (Form Validation)**
-* **Powerange**
-* **Raphael (Vector Graphics Library)**
-* **RWD-Table-Patterns**
-* **Select2**
-* **Summernote (WYSIWYG Editor)**
-* **SweetAlert2**
-* **Tabledit**
+* **Parsley.js** (for robust form validation)
+* **Powerange** (for a beautiful range slider)
+* **Select2** (for enhanced select box functionality)
 * **Timepicker**
-* **TinyMCE (WYSIWYG Editor)**
-* **X-editable**
+* **X-editable** (for in-place editing)
 
+### Rich Text & File Management
+* **Dropify** (for elegant file uploads)
+* **Summernote** (lightweight WYSIWYG editor)
+* **TinyMCE** (advanced WYSIWYG editor)
+
+### Charts & Data Visualization
+* **C3** (D3.js-based charts)
+* **Chart.js** (simple, yet flexible JavaScript charting)
+* **Chartist** (responsive, lean charts)
+* **D3.js** (powerful data-driven documents library)
+* **Flot Chart** (jQuery plotting library)
+* **Morris.js** (beautiful charts using Raphael)
+* **Raphael** (JavaScript vector graphics library, used by Morris.js)
+
+### Tables & Data Grids
+* **Datatables** (advanced table interactions: sorting, pagination, search)
+* **RWD-Table-Patterns** (responsive tables)
+* **Tabledit** (in-place table editing)
+
+### Notifications & Modals
+* **Alertify** (customizable JavaScript dialogs and notifications)
+* **Magnific Popup** (fast, light, responsive lightbox)
+* **SweetAlert2** (beautiful, responsive, customizable JavaScript alerts)
+
+### Mapping & Location
+* **GMaps** (jQuery plugin for Google Maps)
+* **jVectorMap** (interactive maps)
+
+### Calendars & Time
+* **FullCalendar** (full-sized drag & drop event calendar)
+* **Moment.js** (parse, validate, manipulate, and format dates)
+
+### Miscellaneous UI Components
+* **Bootstrap Rating** (star rating component)
+* **Ion.RangeSlider** (nice and comfortable range slider)
+* **jQuery Knob** (canvas-based rotary knob control)
 ---
 
 ## 🔑 Database Setup (MySQL)
