@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo SITE_NAME; ?></title>
-  <link rel="stylesheet" href="assets/css/main.css">
   <?php include __DIR__ . '/../partials/meta.php'; ?>
   <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
   <!-- bootstrap -->

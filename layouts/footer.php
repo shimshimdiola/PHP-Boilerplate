@@ -11,7 +11,7 @@
   <script src="assets/js/jquery.nicescroll.js"></script>
   <script src="assets/js/jquery.scrollTo.min.js"></script>
   <script src="assets/plugins/chart.js/chart.min.js"></script>
-  <script src="assets/pages/dashboard.js"></script><!-- App js -->
+  <script src="assets/pages/dashboard.js"></script>
   <!-- Sweet-Alert  -->
   <script src="assets/plugins/sweet-alert2/sweetalert2.min.js"></script>
   <script src="assets/pages/sweet-alert.init.js"></script>
