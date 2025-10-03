@@ -9,7 +9,7 @@ if (isset($_SESSION['user_id'])) {
 require_once __DIR__ . '/db/connection.php';
 require_once __DIR__ . '/include/functions.php'; // make sure this connects $conn
 include 'layouts/header.php';
-
+// Api to handle login
 include 'api/login.php'; // handles login logic
 ?>
 
