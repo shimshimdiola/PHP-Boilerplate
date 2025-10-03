@@ -1,5 +1,10 @@
-<main>
-  <h2>Contact Us</h2>
-  <p>For inquiries, please reach out to us:</p>
-  <p>Email: <a href="mailto:shimshimdiola@gmail.com">Kian shim Diola</a></p>
-</main>
+<tr class="border-0">
+  <td class="border-0">
+    A title with a text under
+  </td>
+  <td class="border-0">
+    <button type="button" class="btn btn-primary waves-effect waves-light" id="sa-title">
+      Click me
+    </button>
+  </td>
+</tr>
