@@ -20,7 +20,7 @@ include 'layouts/header.php';
                     if (preg_match('/^[a-zA-Z0-9_-]+$/', $page) && file_exists($file)) {
                         include $file;
                     } else {
-                        echo "<main><h2>404 - Page Not Found</h2></main>";
+                       include __DIR__ . '/pages/404.html';
                     }
                     ?>
 
