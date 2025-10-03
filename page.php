@@ -2,7 +2,7 @@
 require_once __DIR__ . '/config/config.php';
 if (!isset($_SESSION['user_id'])) {
     // not logged in → send to login
-    header("Location: /webtemp");
+    header("Location: " . BASE_URL . "");
     exit;
 }
 require_once __DIR__ . '/db/connection.php';
