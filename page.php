@@ -13,20 +13,16 @@ include 'layouts/header.php';
         <div class="content">
 
             <?php include 'partials/nav.php' ?>
-            <div class="page-content-wrapper">
-                <div class="container-fluid">
-                    <!-- Page content here!! -->
-                    <?php
-                    if (preg_match('/^[a-zA-Z0-9_-]+$/', $page) && file_exists($file)) {
-                        include $file;
-                    } else {
-                       include __DIR__ . '/pages/404.html';
-                    }
-                    ?>
+            <!-- Page content here!! -->
+            <?php
+            if (preg_match('/^[a-zA-Z0-9_-]+$/', $page) && file_exists($file)) {
+                include $file;
+            } else {
+                include __DIR__ . '/pages/404.html';
+            }
+            ?>
 
 
-                </div><!-- container -->
-            </div><!-- Page content Wrapper -->
         </div><!-- content -->
         <footer class="footer">&copy; <?php echo getCurrentYear(); ?> <?php echo SITE_NAME; ?>. All rights reserved.</footer>
     </div><!-- End Right content here -->

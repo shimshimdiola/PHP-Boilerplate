@@ -1,10 +1,23 @@
-<tr class="border-0">
-  <td class="border-0">
-    A title with a text under
-  </td>
-  <td class="border-0">
-    <button type="button" class="btn btn-primary waves-effect waves-light" id="sa-title">
-      Click me
-    </button>
-  </td>
-</tr>
+<div class="page-content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="page-title-box">
+          <div class="btn-group float-right">
+            <ol class="breadcrumb hide-phone p-0 m-0">
+              <li class="breadcrumb-item"><a href="page.php?p=dashboard"><?php echo SITE_NAME; ?></a></li>
+              <li class="breadcrumb-item active text-capitalize"><?php echo $page ?> </li>
+            </ol>
+          </div>
+          <h4 class="page-title text-capitalize"> <?php echo $page ?></h4>
+        </div>
+      </div>
+    </div><!-- end page title end breadcrumb -->
+    <div class="row">
+      <!-- content here -->
+
+
+
+    </div>
+  </div><!-- container -->
+</div>
