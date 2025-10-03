@@ -4,7 +4,7 @@
     <div class="topbar-left">
         <div class="text-center bg-logo">
 
-            <a href="index.html" class="logo">
+            <a href=" <?php echo BASE_URL ?> " class="logo">
                 <img class="m-2" src="assets/images/logo.png" height="24" alt="logo"><?php echo SITE_NAME; ?></a>
         </div>
     </div>
@@ -25,22 +25,19 @@
         <div id="sidebar-menu">
             <ul>
                 <li class="menu-title">Main</li>
-                <li><a href="javascript:void(0);" class="waves-effect"><i class="dripicons-device-desktop"></i>
+                <li><a href="page.php?p=dashboard" class="waves-effect"><i class="dripicons-device-desktop"></i>
                         <span>Dashboard <span
                                 class="badge badge-pill badge-primary float-right">7</span></span></a></li>
-                <li><a href="javascript:void(0);" class="waves-effect"><i class="dripicons-to-do"></i><span>
-                            Calendar</span></a></li>
+                <li><a href="page.php?p=contact" class="waves-effect"><i class="dripicons-to-do"></i><span>
+                            Contact</span></a></li>
                 <li class="menu-title">Components</li>
-                <li class="has_sub active nav-active"><a href="javascript:void(0);" class="waves-effect"><i
+                <li class="has_sub"><a href="javascript:void(0);" class="waves-effect"><i
                             class="dripicons-jewel"></i> <span>UI Elements </span><span class="float-right"><i
                                 class="mdi mdi-chevron-right"></i></span></a>
                     <ul class="list-unstyled">
                         <li><a href="javascript:void(0);">Alerts</a></li>
                         <li><a href="javascript:void(0);">Alertify</a></li>
                         <li><a href="javascript:void(0);">Badge</a></li>
-                        <li><a href="javascript:void(0);">Buttons</a></li>
-                        <li><a href="javascript:void(0);">Carousel</a></li>
-                        <li><a href="javascript:void(0);">Cards</a></li>
                     </ul>
                 </li>
             </ul>
