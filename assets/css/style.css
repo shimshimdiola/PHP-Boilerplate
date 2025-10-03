@@ -3236,7 +3236,7 @@ pre[class*=language-] {
 }
 
 .wrapper-page .card {
-    border: 7px double #605daf;
+    /* border: 7px double #605daf; */
     border-radius: 10px
 }
 

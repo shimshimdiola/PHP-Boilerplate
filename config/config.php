@@ -3,6 +3,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
 // Site configuration
 define("SITE_NAME", "PHP-Boilerplate");
 // Base URL of the application

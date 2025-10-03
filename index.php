@@ -1,29 +1,85 @@
 <?php
-require_once __DIR__ . '/config/config.php';
-require_once __DIR__ . '/db/connection.php';
-require_once __DIR__ . '/include/functions.php';
 
+require_once __DIR__ . '/config/config.php';
+if (isset($_SESSION['user_id'])) {
+    // already logged in → go straight to dashboard
+    header("Location: page.php?p=dashboard");
+    exit;
+}
+require_once __DIR__ . '/db/connection.php';
+require_once __DIR__ . '/include/functions.php'; // make sure this connects $conn
 include 'layouts/header.php';
+
+$error = "";
+
+// Handle login form submission
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $email = trim($_POST['email'] ?? '');
+    $password = trim($_POST['password'] ?? '');
+
+    if ($email && $password) {
+        // Fetch user by email
+        $stmt = $conn->prepare("SELECT id, name, email, password FROM users WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($row = $result->fetch_assoc()) {
+            // Since your DB uses MD5, compare with md5()
+            if (md5($password) === $row['password']) {
+                // Store session data
+                $_SESSION['user_id']    = $row['id'];
+                $_SESSION['user_name']  = $row['name'];
+                $_SESSION['user_email'] = $row['email'];
+
+                // Redirect to dashboard (or default page)
+                header("Location: page.php?p=dashboard");
+                exit;
+            } else {
+                $error = 'The password you’ve entered is incorrect.';
+            }
+        } else {
+            $error = "The email you’ve entered is incorrect.";
+        }
+    } else {
+        $error = "⚠️ Please fill in both fields.";
+    }
+}
 ?>
 
-<div class="content-wrapper">
-    <?php include 'partials/sidebar.php'; ?>
-    <div class="content-page"><!-- Start content -->
-        <div class="content">
-
-            <?php include 'partials/nav.php' ?>
-            <div class="page-content-wrapper">
-                <div class="container-fluid">
-
-                    <!-- Page content here!! -->
-
-
-
-                </div><!-- container -->
-            </div><!-- Page content Wrapper -->
-        </div><!-- content -->
-        <footer class="footer">&copy; <?php echo getCurrentYear(); ?> <?php echo SITE_NAME; ?>. All rights reserved.</footer>
-    </div><!-- End Right content here -->
+<!-- HTML Login Form -->
+<div class="wrapper-page">
+    <div class="card">
+        <div class="card-body">
+            <div class="text-center m-b-15">
+                <h2 class="">PHP-BOILERPLATE</h2>
+            </div>
+            <div class="p-3">
+                <form class="form-horizontal" method="POST" action="">
+                    <div class="user-thumb text-center m-b-30">
+                        <img src="assets/images/logo.png" class="rounded-circle img-thumbnail" alt="thumbnail">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input class="form-control" name="email" type="email" required placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input class="form-control" name="password" type="password" required placeholder="Password">
+                        </div>
+                    </div>
+                    <?php if ($error): ?>
+                    <p class="text-danger"><?= htmlspecialchars($error) ?></p>
+                <?php endif; ?>
+                    <div class="form-group text-center row m-t-20">
+                        <div class="col-12">
+                            <button class="btn btn-danger btn-block waves-effect waves-light" type="submit">Log In</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
-
 <?php include 'layouts/footer.php'; ?>

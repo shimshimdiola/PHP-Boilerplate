@@ -10,7 +10,7 @@
     </div>
     <div class="sidebar-user"><img src="assets/images/logo.png" alt="user"
             class="rounded-circle img-thumbnail mb-1">
-        <h6 class=""><?php echo SITE_NAME; ?></h6>
+        <h6 class=""><?php echo $_SESSION['user_name']; ?></h6>
         <p class="online-icon text-dark"><i class="mdi mdi-record text-success"></i>online</p>
         <ul class="list-unstyled list-inline mb-0 mt-2">
             <li class="list-inline-item"><a href="#" class="" data-toggle="tooltip" data-placement="top"
