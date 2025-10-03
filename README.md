@@ -129,9 +129,9 @@ You must run the SQL snippet below in your **phpMyAdmin**, MySQL Workbench, or C
 ### 💾 SQL Snippet
 
 ```sql
-CREATE DATABASE webtemp;
+CREATE DATABASE boilerplate_db;
 
-USE webtemp;
+USE boilerplate_db;
 
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
