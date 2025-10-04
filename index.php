@@ -10,15 +10,14 @@ require_once __DIR__ . '/db/connection.php';
 require_once __DIR__ . '/include/functions.php'; // make sure this connects $conn
 include 'layouts/header.php';
 // Api to handle login
-include 'api/login.php'; // handles login logic
+include 'api/login.php';
 ?>
-
 <!-- HTML Login Form -->
 <div class="wrapper-page">
     <div class="card">
         <div class="card-body">
             <div class="text-center m-b-15">
-                <h2 class="">PHP-BOILERPLATE</h2>
+                <h2 class=""><?php echo SITE_NAME ?></h2>
             </div>
             <div class="p-3">
                 <form class="form-horizontal" method="POST" action="">
@@ -36,8 +35,8 @@ include 'api/login.php'; // handles login logic
                         </div>
                     </div>
                     <?php if ($error): ?>
-                    <p class="text-danger"><?= htmlspecialchars($error) ?></p>
-                <?php endif; ?>
+                        <p class="text-danger"><?= htmlspecialchars($error) ?><a target='_blank' href="https://github.com/shimshimdiola/PHP-Boilerplate?tab=readme-ov-file#-sql-snippet"> Find here.</a> </p>
+                    <?php endif; ?>
                     <div class="form-group text-center row m-t-20">
                         <div class="col-12">
                             <button class="btn btn-danger btn-block waves-effect waves-light" type="submit">Log In</button>

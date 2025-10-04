@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 header("Location: page.php?p=dashboard");
                 exit;
             } else {
+
                 $error = 'The password you’ve entered is incorrect.';
             }
         } else {
