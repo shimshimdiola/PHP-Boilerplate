@@ -4,13 +4,6 @@ require_once __DIR__ . '/db/connection.php';
 // Check if user is logged in
 // ✅ Check if user_id exists in DB
 include __DIR__ . '/api/check_session.php';
-if ($result->num_rows === 0) {
-    // User not found → clear session + redirect to login
-    session_unset();
-    session_destroy();
-    header("Location: " . BASE_URL);
-    exit;
-}
 // If reached here → user is valid and logged in
 require_once __DIR__ . '/include/functions.php';
 // Determine which page to load
