@@ -1,10 +1,11 @@
 <?php
+include_once __DIR__ . '/../config/config.php';
+// echo SITE_NAME;
 # this is for testing purpose only. you can change it to your own database details.
-
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "boilerplate_db";
+$db   = DB_NAME . "_db";
 
 // Suppress PHP warning with @
 $conn = @new mysqli($host, $user, $pass, $db);
