@@ -3,7 +3,6 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-
 // Site configuration: make sure the name matches your folder name
 define("SITE_NAME", "PHP-Boilerplate");
 // Database name without prefix/suffix
