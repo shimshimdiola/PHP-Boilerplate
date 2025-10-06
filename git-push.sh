@@ -13,7 +13,23 @@ echo -e "${CYAN}${BOLD}🔗 Git remotes:${RESET}"
 git remote -v
 echo ""
 
-# Ask before adding files
+# Check if remote 'origin' exists
+if ! git remote | grep -q "^origin$"; then
+    echo -e "${YELLOW}⚠️ No remote 'origin' found.${RESET}"
+    echo -e "${CYAN}Enter your remote repository URL (e.g., https://github.com/user/repo.git):${RESET} \c"
+    read remote_url
+
+    if [ -z "$remote_url" ]; then
+        echo -e "${RED}❌ No URL entered. Skipping remote setup.${RESET}"
+    else
+        git remote add origin "$remote_url"
+        echo -e "${GREEN}✅ Remote 'origin' added successfully.${RESET}"
+    fi
+else
+    echo -e "${GREEN}✅ Remote 'origin' already exists.${RESET}"
+fi
+echo ""
+
 # Ask before adding files
 echo -e "${YELLOW}Do you want to add all files? (y/n):${RESET} \c"
 read add_confirm
@@ -38,7 +54,6 @@ else
         exit 1
     fi
 fi
-
 
 # Ask before committing
 echo -e "${YELLOW}Do you want to commit changes? (y/n):${RESET} \c"
@@ -73,7 +88,7 @@ if [[ $push_confirm == "y" || $push_confirm == "Y" ]]; then
     read confirm_push
 
     if [[ $confirm_push == "y" || $confirm_push == "Y" ]]; then
-        git push origin "$branch"
+        git push -u origin "$branch"
         echo -e "${GREEN}✅ Successfully pushed to branch '${BOLD}$branch${RESET}${GREEN}'.${RESET}"
     else
         echo -e "${RED}❌ Push cancelled.${RESET}"
