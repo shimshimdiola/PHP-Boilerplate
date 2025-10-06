@@ -1,32 +1,83 @@
 #!/bin/bash
 
+# Define colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
 # Show git remotes
+echo -e "${CYAN}${BOLD}🔗 Git remotes:${RESET}"
 git remote -v
+echo ""
 
 # Ask before adding files
-read -p "Do you want to add all files? (y/n): " add_confirm
+# Ask before adding files
+echo -e "${YELLOW}Do you want to add all files? (y/n):${RESET} \c"
+read add_confirm
+
 if [[ $add_confirm == "y" || $add_confirm == "Y" ]]; then
     git add .
-    echo "✅ Files added."
+    echo -e "${GREEN}✅ All files added.${RESET}"
 else
-    echo "❌ Skipped adding files."
-    exit 0
+    echo -e "${CYAN}Enter the specific file or folder you want to add:${RESET} \c"
+    read target
+
+    if [ -z "$target" ]; then
+        echo -e "${RED}❌ No file or folder specified. Exiting...${RESET}"
+        exit 0
+    fi
+
+    if [ -e "$target" ]; then
+        git add "$target"
+        echo -e "${GREEN}✅ Added: ${BOLD}$target${RESET}"
+    else
+        echo -e "${RED}❌ The file or folder '${BOLD}$target${RESET}${RED}' does not exist.${RESET}"
+        exit 1
+    fi
 fi
 
+
 # Ask before committing
-read -p "Do you want to commit changes? (y/n): " commit_confirm
+echo -e "${YELLOW}Do you want to commit changes? (y/n):${RESET} \c"
+read commit_confirm
 if [[ $commit_confirm == "y" || $commit_confirm == "Y" ]]; then
-    read -p "Enter commit message: " msg
+    echo -e "${CYAN}Enter commit message:${RESET} \c"
+    read msg
     git commit -m "$msg"
+    echo -e "${GREEN}✅ Commit created.${RESET}"
 else
-    echo "❌ Skipped commit."
+    echo -e "${RED}❌ Skipped commit.${RESET}"
     exit 0
 fi
 
 # Ask before pushing
-read -p "Do you want to push to remote? (y/n): " push_confirm
+echo -e "${YELLOW}Do you want to push to a branch? (y/n):${RESET} \c"
+read push_confirm
 if [[ $push_confirm == "y" || $push_confirm == "Y" ]]; then
-    git push
+    echo -e "${CYAN}${BOLD}📋 Available branches:${RESET}"
+    git branch
+    echo ""
+    
+    echo -e "${CYAN}Enter branch name to push (leave blank for current):${RESET} \c"
+    read branch
+
+    if [ -z "$branch" ]; then
+        branch=$(git rev-parse --abbrev-ref HEAD)
+    fi
+
+    echo -e "${YELLOW}You are about to push to branch:${RESET} ${BOLD}$branch${RESET}"
+    echo -e "${YELLOW}Proceed? (y/n):${RESET} \c"
+    read confirm_push
+
+    if [[ $confirm_push == "y" || $confirm_push == "Y" ]]; then
+        git push origin "$branch"
+        echo -e "${GREEN}✅ Successfully pushed to branch '${BOLD}$branch${RESET}${GREEN}'.${RESET}"
+    else
+        echo -e "${RED}❌ Push cancelled.${RESET}"
+    fi
 else
-    echo "❌ Push skipped."
+    echo -e "${RED}❌ Push skipped.${RESET}"
 fi
