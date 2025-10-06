@@ -55,6 +55,12 @@ else
     fi
 fi
 
+# ✅ Show git status after adding files
+echo ""
+echo -e "${CYAN}${BOLD}📋 Current Git Status (after add):${RESET}"
+git status
+echo ""
+
 # Ask before committing
 echo -e "${YELLOW}Do you want to commit changes? (y/n):${RESET} \c"
 read commit_confirm
