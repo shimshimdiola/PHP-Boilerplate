@@ -248,7 +248,7 @@ Licensed under the [MIT License](https://opensource.org/licenses/MIT).
 ## 💡 Author
 
 **Kian Shim Diola**
-📧 [shimshimdiola@example.com](mailto:shimshimdiola@example.com)
+📧 [shimshimdiola@gmail.com](mailto:shimshimdiola@gmail.com)
 🌐 [GitHub: shimshimdiola](https://github.com/shimshimdiola)
 
 ---
