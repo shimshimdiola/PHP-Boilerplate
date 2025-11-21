@@ -8,9 +8,7 @@ if (!empty($_POST)) {
             echo htmlspecialchars($key) . ": " . htmlspecialchars($value) . "<br>";
         }
     }
-
     echo "<br><b>Action Result:</b><br>";
-
     switch ($formId) {
         case 'form1':
             echo "👉 This data would be INSERTED (Form 1 logic simulated).";
